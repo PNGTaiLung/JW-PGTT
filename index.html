@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0a1020">
+  <title>W.E. Lab — Um convite especial</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app">
+    <!-- PRIMEIRA TELA: TECNOLÓGICA -->
+    <section class="screen screen--system is-active" id="screen-system" aria-labelledby="system-title">
+      <div class="system-window">
+        <header class="topbar">
+          <div class="brand">
+            <span class="brand-mark">&lt;/&gt;</span>
+            <span class="brand-copy"><strong>W.E. LAB</strong><small>DEVELOPMENT ENVIRONMENT</small></span>
+          </div>
+          <span class="online"><i></i> SYSTEM ONLINE</span>
+        </header>
+        <div class="system-content">
+          <div class="eyebrow"><span class="eyebrow-line"></span> PRIVATE BETA <span class="build">BUILD 01.26</span></div>
+          <h1 id="system-title">Ambiente de<br><span>validação</span></h1>
+          <p class="intro">Uma nova funcionalidade está pronta para ser testada. Preciso de uma pessoa para validar essa experiência antes do lançamento.</p>
+          <div class="system-card">
+            <div class="system-card-heading"><span>VERIFICAÇÃO DO AMBIENTE</span><span>03/03</span></div>
+            <div class="check-row"><span class="check-icon">✓</span><span>Interface e responsividade</span><b>OK</b></div>
+            <div class="check-row"><span class="check-icon">✓</span><span>Fluxo de navegação</span><b>OK</b></div>
+            <div class="check-row"><span class="check-icon">✓</span><span>Módulo de convidado</span><b class="blue">READY</b></div>
+          </div>
+          <button class="button button--tech" id="enter-button" type="button"><span>INICIAR TESTE</span><span class="button-arrow">↗</span></button>
+          <div class="bottom-meta"><span>SESSION: GUEST</span><span>STATUS: WAITING FOR INPUT</span></div>
+        </div>
+        <div class="window-footer"><span class="footer-dot"></span><span>W.E. LAB / EXPERIMENTAL INTERFACE</span><span>v1.0</span></div>
+      </div>
+      <div class="page-note">AMBIENTE DE TESTES <span>•</span> ACESSO CONVIDADO</div>
+    </section>
+
+    <!-- TODAS AS TELAS ABAIXO: ROMÂNTICAS E DELICADAS -->
+    <section class="screen screen--romantic" id="screen-invite" aria-labelledby="invite-title">
+      <div class="floating-hearts" aria-hidden="true"><span>♡</span><span>♥</span><span>♡</span><span>✿</span></div>
+      <article class="cute-card invite-card">
+        <div class="cute-badge">✿ uma surpresa para você ✿</div>
+        <div class="big-heart" aria-hidden="true">♡</div>
+        <p class="sweet-eyebrow">TESTE CONCLUÍDO!</p>
+        <h2 id="invite-title">Ops... era um<br><span>convite pra você!</span></h2>
+        <p class="sweet-copy">Eu estava testando uma ideia, mas percebi que faltava a parte mais importante: alguém especial para compartilhar esse momento.</p>
+        <div class="doodle-divider"><span>♡</span><span>♡</span><span>♡</span></div>
+        <p class="sweet-question">Você aceita sair comigo?</p>
+        <div class="invite-actions">
+          <button class="button button--yes" id="yes-button" type="button">Sim, eu aceito! 💗</button>
+          <button class="button button--no" id="no-button" type="button">Não 🙈</button>
+        </div>
+        <p class="tiny-love-note">prometo que vai ser especial ✨</p>
+      </article>
+    </section>
+
+    <section class="screen screen--romantic" id="screen-choices" aria-labelledby="choices-title">
+      <div class="floating-hearts" aria-hidden="true"><span>♡</span><span>✿</span><span>♥</span></div>
+      <article class="cute-card choices-card">
+        <div class="cute-badge">💌 nosso momentinho</div>
+        <h2 id="choices-title">Vamos escolher<br>nosso encontro?</h2>
+        <p class="sweet-copy">Quero que seja um dia gostoso com você. Escolha o que mais combina com a gente! 💕</p>
+
+        <div class="choice-grid" role="group" aria-label="Tipo de encontro">
+          <button class="choice" type="button" data-type="Cinema" aria-pressed="false"><span class="choice-icon">🎬</span><strong>Cinema</strong><small>Filme, pipoca e carinho</small></button>
+          <button class="choice" type="button" data-type="Viagem longa" aria-pressed="false"><span class="choice-icon">🚗</span><strong>Viagem longa</strong><small>Conhecer um lugar novo</small></button>
+          <button class="choice" type="button" data-type="Hamburgueria" aria-pressed="false"><span class="choice-icon">🍔</span><strong>Hamburgueria</strong><small>Comer algo gostoso</small></button>
+          <button class="choice" type="button" data-type="Japonês" aria-pressed="false"><span class="choice-icon">🍣</span><strong>Comida japonesa</strong><small>Sushi e companhia</small></button>
+          <button class="choice choice--wide" type="button" data-type="Viagem curta" aria-pressed="false"><span class="choice-icon">🌷</span><strong>Viagem curtinha</strong><small>Um passeio especial por perto</small></button>
+        </div>
+
+        <div class="details-panel" id="details-panel" hidden>
+          <label for="place-select" id="place-label">Escolha o local 💗</label>
+          <select id="place-select"><option value="">Selecione uma opção</option></select>
+          <div id="movie-field" hidden>
+            <label for="movie-name">Qual filme você quer ver? 🍿</label>
+            <input id="movie-name" type="text" placeholder="Escreva o nome do filme">
+          </div>
+          <div id="place-links" class="place-links"></div>
+        </div>
+
+        <div class="form-field">
+          <label for="date-choice">Que dia fica bom pra você? 📅</label>
+          <input id="date-choice" type="date">
+        </div>
+        <div class="form-field">
+          <label for="note">Quer me deixar um recadinho? 💌 <span class="optional">OPCIONAL</span></label>
+          <textarea id="note" rows="3" placeholder="Vou ler com muito carinho..."></textarea>
+        </div>
+        <p class="form-error" id="form-error" role="alert"></p>
+        <button class="button button--yes button--full" id="confirm-button" type="button">Confirmar nosso encontro 💖</button>
+        <button class="text-button" type="button" data-go="screen-invite">← Voltar para o convite</button>
+      </article>
+    </section>
+
+    <section class="screen screen--romantic" id="screen-confirmation" aria-labelledby="confirmation-title">
+      <div class="floating-hearts" aria-hidden="true"><span>♡</span><span>♥</span><span>✿</span></div>
+      <article class="cute-card confirmation-card">
+        <div class="cute-badge">💕 confirmado com sucesso 💕</div>
+        <div class="confirmation-heart">♥</div>
+        <h2 id="confirmation-title">Temos um<br><span>encontro marcado!</span></h2>
+        <p class="sweet-copy">A melhor parte desse projeto é poder compartilhar o resultado com você. Já estou ansioso por esse dia! ✨</p>
+        <div class="summary" id="summary"></div>
+        <p class="final-note">Obrigadinho por aceitar. Vai ser muito especial. ❤️</p>
+        <p class="email-status" id="email-status" role="status"></p>
+        <button class="button button--soft button--full" id="restart-button" type="button">Voltar ao início 🌸</button>
+      </article>
+    </section>
+  </main>
+
+  <iframe name="mail-frame" title="Envio de e-mail" class="hidden-frame"></iframe>
+  <form id="mail-form" action="https://formsubmit.co/wendel.emanuel@gmail.com" method="POST" target="mail-frame">
+    <input type="hidden" name="_subject" value="Resposta ao convite para o encontro 💗">
+    <input type="hidden" name="_template" value="table">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="Tipo de encontro" id="mail-type">
+    <input type="hidden" name="Local ou filme" id="mail-place">
+    <input type="hidden" name="Data escolhida" id="mail-date">
+    <input type="hidden" name="Mensagem" id="mail-note">
+  </form>
+</body>
+</html>
