@@ -7,7 +7,9 @@ document.addEventListener("DOMContentLoaded", () => {
     "Viagem longa": ["Pedreira", "São Paulo (SP)", "Torre de Miroku"],
     "Hamburgueria": ["Brooks", "Lifebox", "Madero", "Empório de Comidas – Boliche Parque Dom Pedro"],
     "Japonês": ["Satoshi – Campinas", "My Sushi", "Sukiya"],
-    "Viagem curta": ["Pico das Cabras – Campinas", "Parque do Taquaral", "Maeda – Itu"]
+    "Viagem curta": ["Pico das Cabras – Campinas", "Parque do Taquaral", "Maeda – Itu"],
+    "Pizza": ["Zuka - Campinas", "Pizza Hut", "La Braciera - Campinas", "Brace di Napoli - Indaiatuba"]
+
   };
   const mapQueries = {
     "Pedreira": "Pedreira SP", "São Paulo (SP)": "São Paulo SP", "Torre de Miroku": "Torre de Miroku",
@@ -15,7 +17,8 @@ document.addEventListener("DOMContentLoaded", () => {
     "Empório de Comidas – Boliche Parque Dom Pedro": "Empório de Comidas Boliche Parque Dom Pedro",
     "Satoshi – Campinas": "Satoshi restaurante japonês Campinas", "My Sushi": "My Sushi Campinas",
     "Sukiya": "Sukiya Campinas", "Pico das Cabras – Campinas": "Pico das Cabras Campinas",
-    "Parque do Taquaral": "Parque Portugal Taquaral Campinas", "Maeda – Itu": "Parque Maeda Itu"
+    "Parque do Taquaral": "Parque Portugal Taquaral Campinas", "Maeda – Itu": "Parque Maeda Itu",
+    "Zuka - Campinas": "Zuka restaurante Campinas", "Pizza Hut": "Pizza Hut Campinas", "La Braciera - Campinas": "La Braciera restaurante Campinas", "Brace di Napoli - Indaiatuba": "Brace di Napoli restaurante Indaiatuba"
   };
 
   let selectedType = "";
@@ -136,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mailForm = $("mail-form");
     const status = $("email-status");
     if (mailForm.action.includes("wendel.emanuel@gmail.com")) {
-      status.textContent = "O encontro foi confirmado! Para receber os detalhes por e-mail, configure seu endereço no index.html.";
+      status.textContent = "O encontro foi confirmado!";
       return;
     }
     status.textContent = "Solicitação de envio iniciada. Na primeira utilização, o FormSubmit pode pedir a confirmação do endereço de e-mail.";
